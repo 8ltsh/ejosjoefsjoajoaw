@@ -4,7 +4,7 @@ const client = new Discord.Client();
 const giphy = require('giphy-api')();
 const fs = require("fs");
 const prefix = "#";
-const devs = ['462006869834203159' , '' , '' , ''];
+const devs = ['486322208109494282' , '' , '' , ''];
 const adminprefix = "#";
  
 client.on('ready', () => {
