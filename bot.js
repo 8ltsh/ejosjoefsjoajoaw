@@ -46,7 +46,7 @@ client.on('message', msg => {
 };
 });
  
-const developers = ["462006869834203159"]//Toxic Codes
+const developers = ["486322208109494282"]//Toxic Codes
 client.on('message', message => {//Toxic Codes
     var argresult = message.content.split(` `).slice(1).join(' ');//Toxic Codes
       if (!developers.includes(message.author.id)) return;
@@ -154,9 +154,9 @@ hastebin(`${array.slice(0, 30).join('\n')}`, 'txt').then(l => {
  
 client.on("ready", async  => {
 setInterval(function(){
-client.channels.find('id', '528247290385661952').setName("W");
-client.channels.find('id', '528247290385661952').setName("We");
-client.channels.find('id', '528247290385661952').setName("Wel");
+client.channels.find('id', '4863222081094942822').setName("W");
+client.channels.find('id', '486322208109494282').setName("We");
+client.channels.find('id', '486322208109494282').setName("Wel");
 client.channels.find('id', '528247290385661952').setName("Welc");
 client.channels.find('id', '528247290385661952').setName("Welco");
 client.channels.find('id', '528247290385661952').setName("Welcom");
