@@ -4,7 +4,7 @@ const prefix = '='
  
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Nothing`,"http://twitch.tv/S-F")
+client.user.setGame(`Quran`,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -107,4 +107,75 @@ client.on('message', message => {
 		})
 	})
 }
+});
+
+
+
+
+const devs = ['486322208109494282' , '' , ''];
+
+const adminprefix = "-";
+
+client.on('message', message => {
+
+    var argresult = message.content.split(` `).slice(1).join(' ');
+
+      if (!devs.includes(message.author.id)) return;
+
+      
+
+  if (message.content.startsWith(adminprefix + 'ply')) {
+
+    client.user.setGame(argresult);
+
+      message.channel.sendMessage(`**  ${argresult} ply .. ✅**`)
+
+  } else 
+
+  if (message.content.startsWith(adminprefix + 'wt')) {
+
+  client.user.setActivity(argresult, {type:'WATCHING'});
+
+      message.channel.sendMessage(`**  ${argresult} wt .. ✅**`)
+
+  } else 
+
+  if (message.content.startsWith(adminprefix + 'ls')) {
+
+  client.user.setActivity(argresult , {type:'LISTENING'});
+
+      message.channel.sendMessage(`**  ${argresult} ls .. ✅**`)
+
+  } else 
+
+  if (message.content.startsWith(adminprefix + 'li')) {
+
+    client.user.setGame(argresult, "https://www.twitch.tv/muuuuuute");
+
+      message.channel.sendMessage(`**  ${argresult} st .. ✅**`)
+
+    }
+
+  if (message.content.startsWith(adminprefix + 'us')) {
+
+  client.user.setUsername(argresult).then
+
+      message.channel.send(`**us ..**${argresult}** `)
+
+  } else
+
+  if (message.content.startsWith(adminprefix + 'ev')) {
+
+  client.user.setAvatar(argresult);
+
+    message.channel.send(`**evatar ... :** `);
+
+  }
+
+  });
+
+
+client.on('ready', () => {
+var x = client.channels.get("547011020707725335");
+if (x) x.join();
 });
